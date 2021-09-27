@@ -62,7 +62,7 @@ class TestFlaskApiUsingRequests(unittest.TestCase):
 
     def test_5_get_data_by_startTime(self):
         valid_res = '[\n  {\n    "id": 994839351840, \n    "name": "Cavaliers vs Lakers", \n    "startTime": "2021-01-15 22:00:00", \n    "url": "http://127.0.0.1:1234/api/match/994839351840"\n  }, \n  {\n    "id": 994839351740, \n    "name": "Real Madrid vs Barcelona", \n    "startTime": "2021-06-20 10:30:00", \n    "url": "http://127.0.0.1:1234/api/match/994839351740"\n  }\n]\n'
-        url = 'http://127.0.0.1:1234/api/match?ordering=startTime'
+        url = 'http://127.0.0.1:1234/api/match/?ordering=startTime'
         data = urllib.urlencode(self.test_update_odds)
         req = urllib2.Request(url, data)
         req.get_method = lambda: 'GET'
@@ -72,7 +72,7 @@ class TestFlaskApiUsingRequests(unittest.TestCase):
 
     def test_6_get_data_by_id(self):
         valid_res = '[\n  {\n    "id": 994839351740, \n    "name": "Real Madrid vs Barcelona", \n    "startTime": "2021-06-20 10:30:00", \n    "url": "http://127.0.0.1:1234/api/match/994839351740"\n  }, \n  {\n    "id": 994839351840, \n    "name": "Cavaliers vs Lakers", \n    "startTime": "2021-01-15 22:00:00", \n    "url": "http://127.0.0.1:1234/api/match/994839351840"\n  }\n]\n'
-        url = 'http://127.0.0.1:1234/api/match?ordering=id'
+        url = 'http://127.0.0.1:1234/api/match/?ordering=id'
         data = urllib.urlencode(self.test_update_odds)
         req = urllib2.Request(url, data)
         req.get_method = lambda: 'GET'
