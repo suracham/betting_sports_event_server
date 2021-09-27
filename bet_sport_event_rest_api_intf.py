@@ -21,7 +21,7 @@ DEFAULT_MONGO_DB_PORT = 27017
 VERSION='1.0'
 
 class BetSportAPI(MethodView):
-  BET_DATA_LOG_FILE = "/var/log/betserver/bet_data.log"
+  BET_DATA_LOG_FILE = "./bet_data.log"
   NEW_EVENT = "NewEvent"
   UPDATE_ODDS = "UpdateOdds"
   SUPPORTED_MESSAGES = ["NewEvent", "UpdateOdds"]

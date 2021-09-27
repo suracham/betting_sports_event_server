@@ -1,15 +1,13 @@
 import logging
 from logging.handlers import *
 
-def get_logger(logfile, owner, loglevel=logging.DEBUG):
+def get_logger(owner, logfile, loglevel=logging.DEBUG):
   logger = logging.getLogger(owner)
   logger.setLevel(logging.DEBUG)
   # create formatter
   formatter = logging.Formatter('%(asctime)s' + ' - %(message)s')
 
   if logfile:
-    #h = RotatingFileHandler(logfile, maxBytes=5*1024*1024, backupCount=5)
-    #logger.addHandler(h)
     h = WatchedFileHandler(logfile)
     h.setFormatter(formatter)
     h.setLevel(logging.DEBUG)

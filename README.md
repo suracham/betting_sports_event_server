@@ -53,8 +53,11 @@ Note: Refer Dependencies section before starting the application
 Application uses MongoDB to store information about sports events, it can be changed to any DB without changing the application code i.e. it uses MongoDB plugin rather than direct Python MongoDB APIs. DB plugin implements the wrapper functions around the Python MongoDB APIs, so to change MongoDB to other DB only the new DB plugin should be implemented with same APIs. 
 
 ### Logging
-All logging information is redirected to the file /var/log/betserver/bet_data.log. It supports logging on console i.e. stdout
-Note: logrotate.conf file can be updated for log rotation of the file /var/log/betserver/bet_data.log
+All logging information is redirected to the file bet_data.log at the same path. It supports logging on console i.e. stdout. 
+
+If the path 
+
+Note: logrotate.conf file can be updated for log rotation of the file bet_data.log
 
 ### Unit Test
 Unit tests are present in the directory ut. Present testcases tests the all API functionalities i.e. GET, POST, PUT, DELETE corresponding to events. 
