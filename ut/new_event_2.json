@@ -1,0 +1,20 @@
+{
+    "id": 8661032861909884412,
+    "message_type": "NewEvent",
+    "event": {
+        "id": 994839351840,
+        "name": "Cavaliers vs Lakers",
+        "startTime": "2021-01-15 22:00:00",
+        "sport": {"id": 221, "name": "Football"},
+        "markets": [
+            {
+                "id": 385086549360974492,
+                "name": "Winner",
+                "selections": [
+                    {"id": 8243901714083345527, "name": "Cavaliers", "odds": 10.01},
+                    {"id": 5737666778266680774, "name": "Lakers", "odds": 5.01},
+                ],
+            }
+        ],
+    },
+}
