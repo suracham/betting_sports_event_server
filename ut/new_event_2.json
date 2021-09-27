@@ -12,9 +12,9 @@
                 "name": "Winner",
                 "selections": [
                     {"id": 8243901714083345527, "name": "Cavaliers", "odds": 10.01},
-                    {"id": 5737666778266680774, "name": "Lakers", "odds": 5.01},
-                ],
+                    {"id": 5737666778266680774, "name": "Lakers", "odds": 5.01}
+                ]
             }
-        ],
-    },
+        ]
+    }
 }

@@ -12,9 +12,9 @@
                 "name": "Winner",
                 "selections": [
                     {"id": 8243901714083343527, "name": "Real Madrid", "odds": 1.01},
-                    {"id": 5737666888266680774, "name": "Barcelona", "odds": 1.01},
-                ],
+                    {"id": 5737666888266680774, "name": "Barcelona", "odds": 1.01}
+                ]
             }
-        ],
-    },
+        ]
+    }
 }
