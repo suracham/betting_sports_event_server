@@ -74,7 +74,6 @@ python bet_event_ut.py
 |  /api/match/createevent  | POST, PUT  |  It creates the sporting event with the provided information. If PUT method is used to update already created event, it doesn’t update any information.   |
 |  /api/match/updateodds | PUT    |  Updates the odds information of the already created sporting event.   |
 |  /api/match/<int:id>  | GET  |  It provides the event information corresponding to provided match ID  |
-|  /api/match/updateodds | PUT    |  Updates the odds information of the already created sporting event.   |
 |  /api/match/?<Query Arguments>  | GET  |  It provides the events’ information corresponding to query. Supported queries are: (i) ordering=<key> : key should be the properties of event i.e. startTime, id, name (ii) key=value : key should be theproperty as mentioned above, value should be the events’ property value to filter the event |
 |  /api/match/deleteevent/<int:match_id> | DELETE    |  It deletes the event with matching match id. Once deleted, event information can’t be retrieved. So careful while using this API   |
 
