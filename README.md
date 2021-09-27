@@ -121,13 +121,13 @@ URI : http://example.com/api/match/createevent
 #### Response
 ```json
 {
-'status': 'Created Event'
+"status": "Created Event"
 }
 ```
 
 #### Response codes
-- Normal: 'Created Event' (200)
-- Error: 'Provided Information is not correct'(404), 'Unable to create new Event'(500)
+- Normal: "Created Event" (200)
+- Error: "Provided Information is not correct"(404), "Unable to create new Event"(500)
 
 
 ### /api/match/updateodds
@@ -173,14 +173,14 @@ URI : http://example.com/api/match/updateodds
 #### Response
 ```json
 {
-'status': 'Updated Odds successfully'
+"status": "Updated Odds successfully"
 }
 ```
 
 #### Response codes
-- Normal: 'Updated Odds successfully' (200) 
+- Normal: "Updated Odds successfully" (200) 
 
-- Error: 'Provided Information is not correct'(404), 'Event not avaialable with provided Id'(404), 'Unable to update Odds'(500)
+- Error: "Provided Information is not correct"(404), "Event not avaialable with provided Id"(404), "Unable to update Odds"(500)
 
 ### /api/match/<int:id>
 It provides the event information corresponding to provided match ID, if match id is not correct then returns failure
@@ -223,7 +223,7 @@ URI : http://example.com/api/match/994839351740
 #### Response codes
 - Normal: In case of successful response (200) 
 
-- Error: 'Match Id not provided' (404), "Event with Match ID not available" (404)
+- Error: "Match Id not provided" (404), "Event with Match ID not available" (404)
 
 ### /api/match/?<Query Arguments>
 It provides the events’ information corresponding to query. Supported queries are 
@@ -308,7 +308,7 @@ URI : http://example.com/api/match/deleteevent/994839351740
 #### Response codes
 - Normal: In case of successful deletion (200) 
 
-- Error: 'Match Id not provided' (404)
+- Error: "Match Id not provided" (404)
 
 
 ### Dependencies 
