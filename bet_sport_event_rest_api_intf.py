@@ -48,7 +48,7 @@ class BetSportAPI(MethodView):
     """
     if not new_event.get('id') or not new_event.get('message_type') or \
        not new_event.get('event'):
-       return False, None
+       return False
     elif new_event.get('message_type') != msg_type:
        return False
 
