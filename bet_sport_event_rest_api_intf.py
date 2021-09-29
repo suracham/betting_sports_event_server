@@ -14,6 +14,7 @@ from logger_interface.logger import get_logger
 from utils import helpers
 from datetime import datetime
 import argparse
+import ast
 
 app = Flask(__name__)
 DEFAULT_MONGO_DB_IP = '127.0.0.1'
@@ -136,8 +137,15 @@ class BetSportAPI(MethodView):
 
 
   def create_event(self):
-    new_event = helpers.unicode_to_str(request.form.to_dict())
+    new_event = {}
+
+    if len(request.form) != 0:
+      new_event = helpers.unicode_to_str(request.form.to_dict())
+    elif request.data:
+      new_event = ast.literal_eval(request.data)
+
     self.debug("Received New Event for Creation: %s"%(new_event))
+
     res = self.validate_new_event(new_event)
 
     if not res:
@@ -163,7 +171,12 @@ class BetSportAPI(MethodView):
     if '/match/createevent'.startswith(request.path):
        return self.create_event()
 
-    new_event = helpers.unicode_to_str(request.form.to_dict())
+    new_event = {}
+
+    if len(request.form) != 0:
+      new_event = helpers.unicode_to_str(request.form.to_dict())
+    elif request.data:
+      new_event = ast.literal_eval(request.data)
 
     if not self.validate_new_event(new_event, BetSportAPI.UPDATE_ODDS):
       self.debug("New Event Validation failed")
